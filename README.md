@@ -1,5 +1,5 @@
 <img width="500" src="https://blog.kakaocdn.net/dn/lD0LP/btrwVb3n7IO/bMsq3NHZNnQweqx3BXkdR0/img.png"><br>
-Main Page - Menu, Search bar <br><br>
+<h2>Main Page - Menu, Search bar</h2> <br><br>
 
 <img width="500" src="https://blog.kakaocdn.net/dn/cscA2x/btrwT0gLj0V/KQWWWUhDaVvnGULsNycvF0/img.png"><br>
 
