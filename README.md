@@ -1,3 +1,5 @@
+<h1>자연어처리(NLP)를 활용한 영화 추천 웹</h1>
+
 <img width="800" src="https://blog.kakaocdn.net/dn/lD0LP/btrwVb3n7IO/bMsq3NHZNnQweqx3BXkdR0/img.png"><br>
 Main Page - Menu, Search bar <br><br>
 
