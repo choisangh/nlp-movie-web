@@ -1,0 +1,1764 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from excellencetheme.com/templates/avastream/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 11 Mar 2022 09:25:46 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <!-- Basic Page -->
+    <meta charset="UTF-8">
+    <title>AI를 활용한 영화 추천</title>
+    <!-- Mobile Specific -->
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <!-- Favicon -->
+    <link href="static/images/favicon.png" rel="shortcut icon" type="image/x-icon">
+    <link href="static/images/favicon.png" rel="icon" type="image/x-icon">
+    <!-- Bootstrap -->
+    <link href="static/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Fontawesome Styles -->
+    <link href="static/css/fontawesome.min.css" rel="stylesheet">
+    <!-- Iconfonts Styles -->
+    <link href="static/css/icofont.css" rel="stylesheet">
+    <!-- Owl Carousel Styles -->
+    <link href="static/css/owl.carousel.min.css" rel="stylesheet">
+    <link href="static/css/owl.theme.default.min.css" rel="stylesheet">
+    <!-- Slick Slider Styles -->
+    <link href="static/css/slick.css" rel="stylesheet">
+    <link href="static/css/slick-theme.css" rel="stylesheet">
+    <!-- Swiper Slider Styles -->
+    <link href="static/css/swiper.min.css" rel="stylesheet">
+    <!-- Animate Styles -->
+    <link href="static/css/animate.css" rel="stylesheet">
+    <!-- Hover Styles -->
+    <link href="static/css/hover-min.css" rel="stylesheet">
+    <!-- Magnific Styles -->
+    <link href="static/css/magnific-popup.css" rel="stylesheet">
+    <!-- Bootstrap Datepicker Styles -->
+    <link href="static/css/bootstrap-datepicker.min.css" rel="stylesheet">
+    <!-- Main Styles -->
+    <link href="static/css/style.css" rel="stylesheet">
+    <!-- Responsive Styles -->
+    <link href="static/css/responsive.css" rel="stylesheet">
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+    <!--[if lt IE 9]>
+          <script src="static/js/html5shiv.js"></script>
+          <script src="static/js/respond.min.js"></script>
+        <![endif]-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Dongle:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Start Preloader -->
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+    </div>
+    <!-- Preloader End -->
+    <div class="main" id="main">
+        <!-- Start Mobile Header -->
+        <header class="mobile-header">
+            <div class="mobile-header-content">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="mobile-logo text-center">
+                                <a href="/"><img alt="" class="img-fluid" src="static/images/header-logo.png"></a>
+                            </div>
+                        </div>
+                        <!-- Logo Col End -->
+                    </div>
+                    <!-- Row End -->
+                </div>
+                <!-- Container End -->
+            </div>
+            <!-- Header Content End -->
+        </header>
+        <!-- Mobile Header End -->
+        <!-- Start Header -->
+        <header class="main-nav clearfix is-sticky">
+            <div class="container-fluid">
+                <div class="row justify-content-between">
+                    <div class="col-lg-9 pl-0">
+                        <!-- Start Navigation -->
+                        <nav class="navbar navbar-expand-lg">
+                            <a class="navbar-brand" href="/"><img alt="" class="img-fluid" src="static/images/header-logo.png"></a>
+                            <!-- Logo End -->
+                            <div class="site-nav-inner float-left">
+                                <button aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarSupportedContent" data-toggle="collapse" type="button"><span class="fa fa-bars"></span></button> <!-- Navbar Toggler End -->
+                                <!-- Navbar Collapse End -->
+                            </div>
+                            <!-- Site Nav Inner End -->
+                        </nav>
+                        <!-- Navigation End -->
+                    </div>
+                    <!-- Col End -->
+                    <div class="col-lg-3 text-right right-menu-wrap">
+                        <ul class="nav d-flex align-items-center list-inline m-0 float-right">
+                            <li class="nav-item">
+                                <div class="nav-search">
+                                    <a class="nav-link modal-popup" href="#search-popup"><i class="icofont-ui-search"></i></a>
+                                </div>
+                                <!-- Search Icon End -->
+                            </li>
+                            <li class="nav-item dropdown">
+                                <div class="nav-notification">
+
+                                    <ul class="dropdown-menu dropdown-menu-right fade-up" role="menu">
+                                        <li>
+                                            <a class="dropdown-item" href="#">
+                                                <div class="notification-card media">
+                                                    <div class="notification-thumb"><img alt="" class="img-fluid" src="static/images/notify/thumb-1.jpg"></div>
+                                                    <!-- Notification thumb end -->
+                                                    <div class="notification-content media-body">
+                                                        <h2 class="notification-title">Iron Door</h2><span class="date"><i class="far fa-clock"></i> 1 min ago</span>
+                                                    </div>
+                                                    <!-- Notification Content end -->
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <!-- Li 1 end -->
+                                        <li>
+                                            <a class="dropdown-item" href="#">
+                                                <div class="notification-card media">
+                                                    <div class="notification-thumb"><img alt="" class="img-fluid" src="static/images/notify/thumb-2.jpg"></div>
+                                                    <!-- Notification thumb end -->
+                                                    <div class="notification-content media-body">
+                                                        <h2 class="notification-title">The Earth</h2><span class="date"><i class="far fa-clock"></i> 3 min ago</span>
+                                                    </div>
+                                                    <!-- Notification Content end -->
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <!-- Li 2 end -->
+                                        <li>
+                                            <a class="dropdown-item" href="#">
+                                                <div class="notification-card media">
+                                                    <div class="notification-thumb"><img alt="" class="img-fluid" src="static/images/notify/thumb-3.jpg"></div>
+                                                    <!-- Notification thumb end -->
+                                                    <div class="notification-content media-body">
+                                                        <h2 class="notification-title">City Dreams</h2><span class="date"><i class="far fa-clock"></i> 10 min ago</span>
+                                                    </div>
+                                                    <!-- Notification Content end -->
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <!-- Li 3 end -->
+                                    </ul>
+                                    <!-- Notification List End -->
+                                </div>
+                                <!-- Notification End -->
+                            </li>
+                            <!-- Nav Item 4 End -->
+                            <!-- Nav Item 2 End -->
+                            <li class="nav-item">
+                                <div class="nav-account ml-2">
+                                    <div class="dropdown">
+                                        <div aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" id="dropdown-account" role="button"><img alt="" class="img-fluid user-icon rounded-circle" src="static/images/avatar/user.jpg"></div>
+                                        <ul class="dropdown-menu dropdown-menu-right fade-up">
+                                            <li>
+                                                <a class="dropdown-item">아시아 경제 핀테크 교육과정</a>
+                                            </li>
+                                            <!-- Li 1 end -->
+                                            <li>
+                                                <a class="dropdown-item">5회차</a>
+                                            </li>
+                                            <!-- Li 2 end -->
+                                            <li>
+                                                <a class="dropdown-item">최상현</a>
+                                            </li>
+                                            <!-- Li 3 end -->
+                                        </ul>
+                                        <!-- Account List End -->
+                                    </div>
+                                    <!-- Account Drop Down End -->
+                                </div>
+                                <!-- Account Menu End -->
+                            </li>
+                            <!-- Nav Item 3 End -->
+                        </ul>
+                        <!-- Nav UL End -->
+                    </div>
+                    <!-- Col End -->
+                </div>
+                <!-- Row End -->
+            </div>
+            <!-- Container End -->
+        </header>
+        <!-- Header End -->
+        <!-- Start Main Slider -->
+        <!-- Main Slider End -->
+        <!-- Start Main Content -->
+        <div class="main-content" style="padding:0px;">
+
+            <!-- Start Last Seasons Section -->
+            <section class="last-seasons pb-0" style="padding:0px;">
+
+                        <!-- Col End -->
+
+                <div class="last-season" style="margin-top:0px;background-image: linear-gradient(to top, #202020, rgb(2 2 2 / 80%)), url(static/images/parallax/best-series.jpg);">
+                    <div class="container-fluid">
+
+                        <div class="season-header text-center">
+                            <div style="margin-bottom:1%;"><img alt="" class="img-fluid" src="static/images/title.png"></div>
+
+
+                            <!---------------------------- -------------------->
+                            <div class="search__container" >
+                            <form id="my_form" method="get" action="/search">
+                                  <div class="dropdown2" >
+                                    <div class="select">
+                                      <span>MENU</span>
+                                      <i class="fa fa-chevron-left"></i>
+                                    </div>
+                                    <input type="hidden" id="search_gubun" name="search_gubun">
+                                    <ul class="dropdown-menu2">
+                                      <li id="genres">장르별</li>
+                                      <li id="story">스토리별</li>
+                                      <li id="actor">배우/감독별</li>
+                                    </ul>
+                                  </div>
+                                    <input type="hidden" class="msg" value="">
+                                    <fieldset><input id="search_str" name="search_str" type="search" autocomplete="off" style="z-index:4;" /><button type="submit" onclick="location.href =  '/search';" ><i class="fa fa-search"></i></button><div id="resdiv" style="position: Absolute;z-index:3;background-color:#EDEDED;width:69%;margin-top:41px;"></div></fieldset>
+
+                            </form>
+                            </div>
+                            <!---------------------------- -------------------->
+
+
+                            <div style="margin-top:1%;margin-bottom:3%;"><p class="mb-4" style="font-family: 'Dongle', sans-serif;"><font size="5">검색하고 싶은 영화 제목을 입력해주세요.</font></p></div>
+                        </div>
+                        <!-- Season Header End -->
+                        <div class="season-tabs">
+                            <div class="col-lg-12">
+                                <div class="row">
+                            <h2 class="block-title">역대 박스오피스</h2>
+                                    </div>
+                        </div>
+                            <div class="tab-content" id="pills-tab-Content">
+                                <div id="pills-drama" class="tab-pane animated fadeInRight show active">
+                                    <div class="row">
+                                        <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
+                                            <div class="video-block">
+                                                <div class="video-thumb position-relative thumb-overlay">
+                                                    <a href="#"><img alt="" class="img-fluid" src="https://image.cine21.com/resize/cine21/poster/2019/0417/11_38_55__5cb691bfbbfd0[X224,320].jpg"></a>
+                                                    <div class="box-content">
+                                                        <ul class="icon">
+                                                            <li>
+                                                                <a href="https://www.youtube.com/watch?v=Ko2NWhXI9e8"><i class="fas fa-play"></i></a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#"><i class="fas fa-plus"></i></a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="http://www.cine21.com/movie/point/view/?movie_id=54122"><i class="fas fa-info"></i></a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <!-- Box Content End -->
+                                                </div>
+                                                <!-- Video Thumb End -->
+                                                <div class="video-content">
+                                                    <h2 class="video-title"><a href="http://www.cine21.com/movie/point/view/?movie_id=54122">어벤져스: 엔드게임</a></h2>
+                                                    <div class="video-info d-flex align-items-center">
+                                                        <span class="video-year">2019</span> <span class="video-seasons"></span>
+                                                    </div>
+                                                </div>
+                                                <!-- video Content End -->
+                                            </div>
+                                            <!-- video Block End -->
+                                        </div>
+                                        <!-- Col End -->
+                                        <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
+                                            <div class="video-block">
+                                                <div class="video-thumb position-relative thumb-overlay">
+                                                    <a href="#"><img alt="" class="img-fluid" src="https://image.cine21.com/resize/cine21/poster/2019/0528/15_09_56__5cecd0b4d4e0c[X224,320].jpg"></a>
+                                                    <div class="box-content">
+                                                        <ul class="icon">
+                                                            <li>
+                                                                <a href="https://www.youtube.com/watch?v=jBdRhhSt3Bc"><i class="fas fa-play"></i></a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#"><i class="fas fa-plus"></i></a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="http://www.cine21.com/movie/point/view/?movie_id=52641"><i class="fas fa-info"></i></a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <!-- Box Content End -->
+                                                </div>
+                                                <!-- Video Thumb End -->
+                                                <div class="video-content">
+                                                    <h2 class="video-title"><a href="http://www.cine21.com/movie/point/view/?movie_id=52641">기생충</a></h2>
+                                                    <div class="video-info d-flex align-items-center">
+                                                        <span class="video-year">2019</span> <span class="video-seasons"></span>
+                                                    </div>
+                                                </div>
+                                                <!-- video Content End -->
+                                            </div>
+                                            <!-- video Block End -->
+                                        </div>
+                                        <!-- Col End -->
+                                        <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
+                                            <div class="video-block">
+                                                <div class="video-thumb position-relative thumb-overlay">
+                                                    <a href="#"><img alt="" class="img-fluid" src="https://image.cine21.com/resize/cine21/poster/2018/1214/11_01_12__5c130ee8e9ae9[X224,320].jpg"></a>
+                                                    <div class="box-content">
+                                                        <ul class="icon">
+                                                            <li>
+                                                                <a href="https://www.youtube.com/watch?v=XTZko22Ze3o"><i class="fas fa-play"></i></a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#"><i class="fas fa-plus"></i></a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="http://www.cine21.com/movie/point/view/?movie_id=52808"><i class="fas fa-info"></i></a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <!-- Box Content End -->
+                                                </div>
+                                                <!-- Video Thumb End -->
+                                                <div class="video-content">
+                                                    <h2 class="video-title"><a href="http://www.cine21.com/movie/point/view/?movie_id=52808">보헤미안 랩소디</a></h2>
+                                                    <div class="video-info d-flex align-items-center">
+                                                        <span class="video-year">2018</span> <span class="video-seasons"></span>
+                                                    </div>
+                                                </div>
+                                                <!-- video Content End -->
+                                            </div>
+                                            <!-- video Block End -->
+                                        </div>
+                                        <!-- Col End -->
+                                        <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
+                                            <div class="video-block">
+                                                <div class="video-thumb position-relative thumb-overlay">
+                                                    <a href="#"><img alt="" class="img-fluid" src="https://image.cine21.com/resize/cine21/poster/2021/1215/16_44_14__61b99cceed48f[X224,320].jpg"></a>
+                                                    <div class="box-content">
+                                                        <ul class="icon">
+                                                            <li>
+                                                                <a href="https://www.youtube.com/watch?v=W7edvITC9g4"><i class="fas fa-play"></i></a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#"><i class="fas fa-plus"></i></a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="http://www.cine21.com/movie/point/view/?movie_id=58356"><i class="fas fa-info"></i></a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <!-- Box Content End -->
+                                                </div>
+                                                <!-- Video Thumb End -->
+                                                <div class="video-content">
+                                                    <h2 class="video-title"><a href="http://www.cine21.com/movie/point/view/?movie_id=58356">스파이더맨: 노 웨이 홈</a></h2>
+                                                    <div class="video-info d-flex align-items-center">
+                                                        <span class="video-year">2021</span> <span class="video-seasons"></span>
+                                                    </div>
+                                                </div>
+                                                <!-- video Content End -->
+                                            </div>
+                                            <!-- video Block End -->
+                                        </div>
+                                        <!-- Col End -->
+                                        <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
+                                            <div class="video-block">
+                                                <div class="video-thumb position-relative thumb-overlay">
+                                                    <a href="#"><img alt="" class="img-fluid" src="https://image.cine21.com/resize/cine21/poster/2014/0721/39921_53cca0ce20300_main_poster01[X224,320].jpg"></a>
+                                                    <div class="box-content">
+                                                        <ul class="icon">
+                                                            <li>
+                                                                <a href="https://www.youtube.com/watch?v=spQtwggaCy4"><i class="fas fa-play"></i></a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#"><i class="fas fa-plus"></i></a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="http://www.cine21.com/movie/point/view/?movie_id=39921"><i class="fas fa-info"></i></a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <!-- Box Content End -->
+                                                </div>
+                                                <!-- Video Thumb End -->
+                                                <div class="video-content">
+                                                    <h2 class="video-title"><a href="http://www.cine21.com/movie/point/view/?movie_id=39921">명량</a></h2>
+                                                    <div class="video-info d-flex align-items-center">
+                                                        <span class="video-year">2014</span> <span class="video-seasons"></span>
+                                                    </div>
+                                                </div>
+                                                <!-- video Content End -->
+                                            </div>
+                                            <!-- video Block End -->
+                                        </div>
+                                        <!-- Col End -->
+                                        <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
+                                            <div class="video-block">
+                                                <div class="video-thumb position-relative thumb-overlay">
+                                                    <a href="#"><img alt="" class="img-fluid" src="https://image.cine21.com/resize/cine21/poster/2018/0518/11_24_55__5afe397791ae3[X224,320].jpg"></a>
+                                                    <div class="box-content">
+                                                        <ul class="icon">
+                                                            <li>
+                                                                <a href="https://www.youtube.com/watch?v=zS0BA8FnnKc"><i class="fas fa-play"></i></a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#"><i class="fas fa-plus"></i></a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="http://www.cine21.com/movie/point/view/?movie_id=20532"><i class="fas fa-info"></i></a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <!-- Box Content End -->
+                                                </div>
+                                                <!-- Video Thumb End -->
+                                                <div class="video-content">
+                                                    <h2 class="video-title"><a href="http://www.cine21.com/movie/point/view/?movie_id=20532">아바타</a></h2>
+                                                    <div class="video-info d-flex align-items-center">
+                                                        <span class="video-year">2009</span> <span class="video-seasons"></span>
+                                                    </div>
+                                                </div>
+                                                <!-- video Content End -->
+                                            </div>
+                                            <!-- video Block End -->
+                                        </div>
+                                        <!-- Col End -->
+                                    </div>
+                                    <!-- Row End -->
+                                </div>
+                                <!-- Tab Pane 1 End -->
+                                <div id="pills-action" class="tab-pane animated fadeInRight">
+                                    <div class="row">
+                                        <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
+                                            <div class="video-block">
+                                                <div class="video-thumb position-relative thumb-overlay">
+                                                    <a href="#"><img alt="" class="img-fluid" src="https://image.cine21.com/resize/cine21/poster/2022/0216/11_50_28__620c667468729[X224,320].jpg"></a>
+                                                    <div class="box-content">
+                                                        <ul class="icon">
+                                                            <li>
+                                                                <a href="watch-show.html"><i class="fas fa-play"></i></a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#"><i class="fas fa-plus"></i></a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="shows-single.html"><i class="fas fa-info"></i></a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <!-- Box Content End -->
+                                                </div>
+                                                <!-- Video Thumb End -->
+                                                <div class="video-content">
+                                                    <h2 class="video-title"><a href="shows-single.html">더 배트맨</a></h2>
+                                                    <div class="video-info d-flex align-items-center">
+                                                        <span class="video-year">2022</span> <span class="video-seasons">03-01</span>
+                                                    </div>
+                                                </div>
+                                                <!-- video Content End -->
+                                            </div>
+                                            <!-- video Block End -->
+                                        </div>
+                                        <!-- Col End -->
+                                        <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
+                                            <div class="video-block">
+                                                <div class="video-thumb position-relative thumb-overlay">
+                                                    <a href="#"><img alt="" class="img-fluid" src="static/images/best-action/02.jpg"></a>
+                                                    <div class="box-content">
+                                                        <ul class="icon">
+                                                            <li>
+                                                                <a href="https://www.youtube.com/watch?v=qhKCYXSHpWY"><i class="fas fa-play"></i></a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#"><i class="fas fa-plus"></i></a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="http://www.cine21.com/movie/info/?movie_id=58807"><i class="fas fa-info"></i></a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <!-- Box Content End -->
+                                                </div>
+                                                <!-- Video Thumb End -->
+                                                <div class="video-content">
+                                                    <h2 class="video-title"><a href="shows-single.html">the beginning</a></h2>
+                                                    <div class="video-info d-flex align-items-center">
+                                                        <span class="video-year">2021</span> <span class="video-seasons">4 Season</span>
+                                                    </div>
+                                                </div>
+                                                <!-- video Content End -->
+                                            </div>
+                                            <!-- video Block End -->
+                                        </div>
+                                        <!-- Col End -->
+                                        <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
+                                            <div class="video-block">
+                                                <div class="video-thumb position-relative thumb-overlay">
+                                                    <a href="#"><img alt="" class="img-fluid" src="static/images/best-action/03.jpg"></a>
+                                                    <div class="box-content">
+                                                        <ul class="icon">
+                                                            <li>
+                                                                <a href="watch-show.html"><i class="fas fa-play"></i></a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#"><i class="fas fa-plus"></i></a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="shows-single.html"><i class="fas fa-info"></i></a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <!-- Box Content End -->
+                                                </div>
+                                                <!-- Video Thumb End -->
+                                                <div class="video-content">
+                                                    <h2 class="video-title"><a href="shows-single.html">The Search</a></h2>
+                                                    <div class="video-info d-flex align-items-center">
+                                                        <span class="video-year">2021</span> <span class="video-seasons">4 Season</span>
+                                                    </div>
+                                                </div>
+                                                <!-- video Content End -->
+                                            </div>
+                                            <!-- video Block End -->
+                                        </div>
+                                        <!-- Col End -->
+                                        <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
+                                            <div class="video-block">
+                                                <div class="video-thumb position-relative thumb-overlay">
+                                                    <a href="#"><img alt="" class="img-fluid" src="static/images/best-action/04.jpg"></a>
+                                                    <div class="box-content">
+                                                        <ul class="icon">
+                                                            <li>
+                                                                <a href="watch-show.html"><i class="fas fa-play"></i></a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#"><i class="fas fa-plus"></i></a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="shows-single.html"><i class="fas fa-info"></i></a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <!-- Box Content End -->
+                                                </div>
+                                                <!-- Video Thumb End -->
+                                                <div class="video-content">
+                                                    <h2 class="video-title"><a href="shows-single.html">The Treasures</a></h2>
+                                                    <div class="video-info d-flex align-items-center">
+                                                        <span class="video-year">2021</span> <span class="video-seasons">4 Season</span>
+                                                    </div>
+                                                </div>
+                                                <!-- video Content End -->
+                                            </div>
+                                            <!-- video Block End -->
+                                        </div>
+                                        <!-- Col End -->
+                                        <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
+                                            <div class="video-block">
+                                                <div class="video-thumb position-relative thumb-overlay">
+                                                    <a href="#"><img alt="" class="img-fluid" src="static/images/best-action/05.jpg"></a>
+                                                    <div class="box-content">
+                                                        <ul class="icon">
+                                                            <li>
+                                                                <a href="watch-show.html"><i class="fas fa-play"></i></a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#"><i class="fas fa-plus"></i></a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="shows-single.html"><i class="fas fa-info"></i></a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <!-- Box Content End -->
+                                                </div>
+                                                <!-- Video Thumb End -->
+                                                <div class="video-content">
+                                                    <h2 class="video-title"><a href="shows-single.html">Problems</a></h2>
+                                                    <div class="video-info d-flex align-items-center">
+                                                        <span class="video-year">2021</span> <span class="video-seasons">4 Season</span>
+                                                    </div>
+                                                </div>
+                                                <!-- video Content End -->
+                                            </div>
+                                            <!-- video Block End -->
+                                        </div>
+                                        <!-- Col End -->
+                                        <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
+                                            <div class="video-block">
+                                                <div class="video-thumb position-relative thumb-overlay">
+                                                    <a href="#"><img alt="" class="img-fluid" src="static/images/best-action/06.jpg"></a>
+                                                    <div class="box-content">
+                                                        <ul class="icon">
+                                                            <li>
+                                                                <a href="watch-show.html"><i class="fas fa-play"></i></a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#"><i class="fas fa-plus"></i></a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="shows-single.html"><i class="fas fa-info"></i></a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <!-- Box Content End -->
+                                                </div>
+                                                <!-- Video Thumb End -->
+                                                <div class="video-content">
+                                                    <h2 class="video-title"><a href="shows-single.html">life is Beautiful</a></h2>
+                                                    <div class="video-info d-flex align-items-center">
+                                                        <span class="video-year">2021</span> <span class="video-seasons">4 Season</span>
+                                                    </div>
+                                                </div>
+                                                <!-- video Content End -->
+                                            </div>
+                                            <!-- video Block End -->
+                                        </div>
+                                        <!-- Col End -->
+                                    </div>
+                                    <!-- Row End -->
+                                </div>
+                                <!-- Tab Pane 2 End -->
+                                <div id="pills-romance" class="tab-pane animated fadeInRight">
+                                    <div class="row">
+                                        <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
+                                            <div class="video-block">
+                                                <div class="video-thumb position-relative thumb-overlay">
+                                                    <a href="#"><img alt="" class="img-fluid" src="static/images/best-romance/01.jpg"></a>
+                                                    <div class="box-content">
+                                                        <ul class="icon">
+                                                            <li>
+                                                                <a href="watch-show.html"><i class="fas fa-play"></i></a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#"><i class="fas fa-plus"></i></a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="shows-single.html"><i class="fas fa-info"></i></a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <!-- Box Content End -->
+                                                </div>
+                                                <!-- Video Thumb End -->
+                                                <div class="video-content">
+                                                    <h2 class="video-title"><a href="shows-single.html">End of Sorrows</a></h2>
+                                                    <div class="video-info d-flex align-items-center">
+                                                        <span class="video-year">2021</span> <span class="video-seasons">4 Season</span>
+                                                    </div>
+                                                </div>
+                                                <!-- video Content End -->
+                                            </div>
+                                            <!-- video Block End -->
+                                        </div>
+                                        <!-- Col End -->
+                                        <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
+                                            <div class="video-block">
+                                                <div class="video-thumb position-relative thumb-overlay">
+                                                    <a href="#"><img alt="" class="img-fluid" src="static/images/best-romance/02.jpg"></a>
+                                                    <div class="box-content">
+                                                        <ul class="icon">
+                                                            <li>
+                                                                <a href="watch-show.html"><i class="fas fa-play"></i></a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#"><i class="fas fa-plus"></i></a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="shows-single.html"><i class="fas fa-info"></i></a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <!-- Box Content End -->
+                                                </div>
+                                                <!-- Video Thumb End -->
+                                                <div class="video-content">
+                                                    <h2 class="video-title"><a href="shows-single.html">the thief</a></h2>
+                                                    <div class="video-info d-flex align-items-center">
+                                                        <span class="video-year">2021</span> <span class="video-seasons">4 Season</span>
+                                                    </div>
+                                                </div>
+                                                <!-- video Content End -->
+                                            </div>
+                                            <!-- video Block End -->
+                                        </div>
+                                        <!-- Col End -->
+                                        <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
+                                            <div class="video-block">
+                                                <div class="video-thumb position-relative thumb-overlay">
+                                                    <a href="#"><img alt="" class="img-fluid" src="static/images/best-romance/03.jpg"></a>
+                                                    <div class="box-content">
+                                                        <ul class="icon">
+                                                            <li>
+                                                                <a href="watch-show.html"><i class="fas fa-play"></i></a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#"><i class="fas fa-plus"></i></a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="shows-single.html"><i class="fas fa-info"></i></a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <!-- Box Content End -->
+                                                </div>
+                                                <!-- Video Thumb End -->
+                                                <div class="video-content">
+                                                    <h2 class="video-title"><a href="shows-single.html">Millionaire</a></h2>
+                                                    <div class="video-info d-flex align-items-center">
+                                                        <span class="video-year">2021</span> <span class="video-seasons">4 Season</span>
+                                                    </div>
+                                                </div>
+                                                <!-- video Content End -->
+                                            </div>
+                                            <!-- video Block End -->
+                                        </div>
+                                        <!-- Col End -->
+                                        <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
+                                            <div class="video-block">
+                                                <div class="video-thumb position-relative thumb-overlay">
+                                                    <a href="#"><img alt="" class="img-fluid" src="static/images/best-romance/04.jpg"></a>
+                                                    <div class="box-content">
+                                                        <ul class="icon">
+                                                            <li>
+                                                                <a href="watch-show.html"><i class="fas fa-play"></i></a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#"><i class="fas fa-plus"></i></a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="shows-single.html"><i class="fas fa-info"></i></a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <!-- Box Content End -->
+                                                </div>
+                                                <!-- Video Thumb End -->
+                                                <div class="video-content">
+                                                    <h2 class="video-title"><a href="shows-single.html">The Dreams</a></h2>
+                                                    <div class="video-info d-flex align-items-center">
+                                                        <span class="video-year">2021</span> <span class="video-seasons">4 Season</span>
+                                                    </div>
+                                                </div>
+                                                <!-- video Content End -->
+                                            </div>
+                                            <!-- video Block End -->
+                                        </div>
+                                        <!-- Col End -->
+                                        <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
+                                            <div class="video-block">
+                                                <div class="video-thumb position-relative thumb-overlay">
+                                                    <a href="#"><img alt="" class="img-fluid" src="static/images/best-romance/05.jpg"></a>
+                                                    <div class="box-content">
+                                                        <ul class="icon">
+                                                            <li>
+                                                                <a href="watch-show.html"><i class="fas fa-play"></i></a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#"><i class="fas fa-plus"></i></a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="shows-single.html"><i class="fas fa-info"></i></a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <!-- Box Content End -->
+                                                </div>
+                                                <!-- Video Thumb End -->
+                                                <div class="video-content">
+                                                    <h2 class="video-title"><a href="shows-single.html">Black Color</a></h2>
+                                                    <div class="video-info d-flex align-items-center">
+                                                        <span class="video-year">2021</span> <span class="video-seasons">4 Season</span>
+                                                    </div>
+                                                </div>
+                                                <!-- video Content End -->
+                                            </div>
+                                            <!-- video Block End -->
+                                        </div>
+                                        <!-- Col End -->
+                                        <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
+                                            <div class="video-block">
+                                                <div class="video-thumb position-relative thumb-overlay">
+                                                    <a href="#"><img alt="" class="img-fluid" src="static/images/best-romance/06.jpg"></a>
+                                                    <div class="box-content">
+                                                        <ul class="icon">
+                                                            <li>
+                                                                <a href="watch-show.html"><i class="fas fa-play"></i></a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#"><i class="fas fa-plus"></i></a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="shows-single.html"><i class="fas fa-info"></i></a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <!-- Box Content End -->
+                                                </div>
+                                                <!-- Video Thumb End -->
+                                                <div class="video-content">
+                                                    <h2 class="video-title"><a href="shows-single.html">The Ocean</a></h2>
+                                                    <div class="video-info d-flex align-items-center">
+                                                        <span class="video-year">2021</span> <span class="video-seasons">4 Season</span>
+                                                    </div>
+                                                </div>
+                                                <!-- video Content End -->
+                                            </div>
+                                            <!-- video Block End -->
+                                        </div>
+                                        <!-- Col End -->
+                                    </div>
+                                    <!-- Row End -->
+                                </div>
+                                <!-- Tab Pane 3 End -->
+                            </div>
+                            <!-- Tab Content End -->
+                        </div>
+                        <!-- Season tabs End -->
+                    </div>
+                    <!-- Container End -->
+                </div>
+                <!-- Last Season End -->
+            </section>
+            <!-- Last Seasons Section End -->
+            <!-- Start Suggested Section -->
+            <section class="suggested pt-0">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h2 class="block-title">최신영화</h2>
+                        </div>
+                        <!-- Col End -->
+                    </div>
+                    <!-- Row End -->
+                    <div class="row">
+                        <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
+                            <div class="video-block">
+                                <div class="video-thumb position-relative thumb-overlay">
+                                    <a href="#"><img alt="" class="img-fluid" src="https://image.cine21.com/resize/cine21/poster/2022/0216/11_50_28__620c667468729[X224,320].jpg"></a>
+                                    <div class="box-content">
+                                        <ul class="icon">
+                                            <li>
+                                                <a href="https://www.youtube.com/watch?v=qhKCYXSHpWY"><i class="fas fa-play"></i></a>
+                                            </li>
+                                            <li>
+                                                <a href="#"><i class="fas fa-plus"></i></a>
+                                            </li>
+                                            <li>
+                                                <a href="http://www.cine21.com/movie/info/?movie_id=58807"><i class="fas fa-info"></i></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- Box Content End -->
+                                </div>
+                                <!-- Video Thumb End -->
+                                <div class="video-content">
+                                    <h2 class="video-title"><a href="http://www.cine21.com/movie/info/?movie_id=58807">더 배트맨</a></h2>
+                                    <div class="video-info d-flex align-items-center">
+                                        <span class="video-year">2022</span> <span class="video-age">+15</span> <span class="video-type">미국</span>
+                                    </div>
+                                </div>
+                                <!-- video Content End -->
+                            </div>
+                            <!-- video Block End -->
+                        </div>
+                        <!-- Col End -->
+                        <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
+                            <div class="video-block">
+                                <div class="video-thumb position-relative thumb-overlay">
+                                    <a href="#"><img alt="" class="img-fluid" src="https://image.cine21.com/resize/cine21/poster/2022/0216/14_44_07__620c8f2753234[X224,320].jpg"></a>
+                                    <div class="box-content">
+                                        <ul class="icon">
+                                            <li>
+                                                <a href="https://www.youtube.com/watch?v=fwWZnuyV7pI"><i class="fas fa-play"></i></a>
+                                            </li>
+                                            <li>
+                                                <a href="#"><i class="fas fa-plus"></i></a>
+                                            </li>
+                                            <li>
+                                                <a href="http://www.cine21.com/movie/info/?movie_id=58568"><i class="fas fa-info"></i></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- Box Content End -->
+                                </div>
+                                <!-- Video Thumb End -->
+                                <div class="video-content">
+                                    <h2 class="video-title"><a href="movie-single.html">레벤느망</a></h2>
+                                    <div class="video-info d-flex align-items-center">
+                                        <span class="video-year">2021</span> <span class="video-age">+15</span> <span class="video-type">프랑스</span>
+                                    </div>
+                                </div>
+                                <!-- video Content End -->
+                            </div>
+                            <!-- video Block End -->
+                        </div>
+                        <!-- Col End -->
+                        <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
+                            <div class="video-block">
+                                <div class="video-thumb position-relative thumb-overlay">
+                                    <a href="#"><img alt="" class="img-fluid" src="https://image.cine21.com/resize/cine21/poster/2022/0211/55829_6205b39abb231[X224,320].jpg"></a>
+                                    <div class="box-content">
+                                        <ul class="icon">
+                                            <li>
+                                                <a href="https://www.youtube.com/watch?v=s6UPaXuEwi4"><i class="fas fa-play"></i></a>
+                                            </li>
+                                            <li>
+                                                <a href="#"><i class="fas fa-plus"></i></a>
+                                            </li>
+                                            <li>
+                                                <a href="http://www.cine21.com/movie/info/?movie_id=55829"><i class="fas fa-info"></i></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- Box Content End -->
+                                </div>
+                                <!-- Video Thumb End -->
+                                <div class="video-content">
+                                    <h2 class="video-title"><a href="http://www.cine21.com/movie/info/?movie_id=55829">이상한 나라의 수학자</a></h2>
+                                    <div class="video-info d-flex align-items-center">
+                                        <span class="video-year">2022</span> <span class="video-age">+12</span> <span class="video-type">한국</span>
+                                    </div>
+                                </div>
+                                <!-- video Content End -->
+                            </div>
+                            <!-- video Block End -->
+                        </div>
+                        <!-- Col End -->
+                        <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
+                            <div class="video-block">
+                                <div class="video-thumb position-relative thumb-overlay">
+                                    <a href="#"><img alt="" class="img-fluid" src="https://image.cine21.com/resize/cine21/poster/2022/0302/14_08_00__621efbb02e1eb[X224,320].jpg"></a>
+                                    <div class="box-content">
+                                        <ul class="icon">
+                                            <li>
+                                                <a href="https://www.youtube.com/watch?v=AqVN8Sef13s"><i class="fas fa-play"></i></a>
+                                            </li>
+                                            <li>
+                                                <a href="#"><i class="fas fa-plus"></i></a>
+                                            </li>
+                                            <li>
+                                                <a href="http://www.cine21.com/movie/info/?movie_id=58983"><i class="fas fa-info"></i></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- Box Content End -->
+                                </div>
+                                <!-- Video Thumb End -->
+                                <div class="video-content">
+                                    <h2 class="video-title"><a href="http://www.cine21.com/movie/info/?movie_id=58983">블랙 라이트</a></h2>
+                                    <div class="video-info d-flex align-items-center">
+                                        <span class="video-year">2022</span> <span class="video-age">+15</span> <span class="video-type">미국</span>
+                                    </div>
+                                </div>
+                                <!-- video Content End -->
+                            </div>
+                            <!-- video Block End -->
+                        </div>
+                        <!-- Col End -->
+                        <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
+                            <div class="video-block">
+                                <div class="video-thumb position-relative thumb-overlay">
+                                    <a href="#"><img alt="" class="img-fluid" src="https://image.cine21.com/resize/cine21/poster/2022/0126/58889_61f0d2a2dea46[X224,320].jpg"></a>
+                                    <div class="box-content">
+                                        <ul class="icon">
+                                            <li>
+                                                <a href="https://www.youtube.com/watch?v=HMf3thIbrWs"><i class="fas fa-play"></i></a>
+                                            </li>
+                                            <li>
+                                                <a href="#"><i class="fas fa-plus"></i></a>
+                                            </li>
+                                            <li>
+                                                <a href="http://www.cine21.com/movie/info/?movie_id=58889"><i class="fas fa-info"></i></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- Box Content End -->
+                                </div>
+                                <!-- Video Thumb End -->
+                                <div class="video-content">
+                                    <h2 class="video-title"><a href="http://www.cine21.com/movie/info/?movie_id=58889">서바이벌리스트</a></h2>
+                                    <div class="video-info d-flex align-items-center">
+                                        <span class="video-year">2021</span> <span class="video-age">+15</span> <span class="video-type">미국</span>
+                                    </div>
+                                </div>
+                                <!-- video Content End -->
+                            </div>
+                            <!-- video Block End -->
+                        </div>
+                        <!-- Col End -->
+                        <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
+                            <div class="video-block">
+                                <div class="video-thumb position-relative thumb-overlay">
+                                    <a href="#"><img alt="" class="img-fluid" src="https://image.cine21.com/resize/cine21/poster/2022/0217/58971_620daab826710[X224,320].jpg"></a>
+                                    <div class="box-content">
+                                        <ul class="icon">
+                                            <li>
+                                                <a href="https://www.youtube.com/watch?v=Hc3M2VLs630"><i class="fas fa-play"></i></a>
+                                            </li>
+                                            <li>
+                                                <a href="#"><i class="fas fa-plus"></i></a>
+                                            </li>
+                                            <li>
+                                                <a href="http://www.cine21.com/movie/info/?movie_id=58971"><i class="fas fa-info"></i></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- Box Content End -->
+                                </div>
+                                <!-- Video Thumb End -->
+                                <div class="video-content">
+                                    <h2 class="video-title"><a href="http://www.cine21.com/movie/info/?movie_id=58971">인비저블 킬러</a></h2>
+                                    <div class="video-info d-flex align-items-center">
+                                        <span class="video-year">2022</span> <span class="video-age">+15</span> <span class="video-type">영국</span>
+                                    </div>
+                                </div>
+                                <!-- video Content End -->
+                            </div>
+                            <!-- video Block End -->
+                        </div>
+                        <!-- Col End -->
+                    </div>
+                    <!-- Row End -->
+                </div>
+                <!-- Container End -->
+            </section>
+            <!-- Suggested Section End -->
+        </div>
+        <!-- Start Copyrights Section -->
+        <div class="copyright">
+            <div class="container-fluid">
+                <div class="row justify-content-between">
+                    <div class="col-md-6">
+                        <p>© Copyright 2022, The Asia Business Daily, Fintech Curriculum</p>
+                    </div>
+                    <!-- Col End -->
+                    <div class="col-md-6">
+                        <div class="copyright-menu text-right">
+                        </div>
+                        <!-- Copyrights Menu End -->
+                    </div>
+                    <!-- Col End -->
+                </div>
+                <!-- Row End -->
+            </div>
+            <!-- Container End -->
+        </div>
+        <!-- Copyrights Section End -->
+        <!-- To Top Button Start-->
+        <div class="back-to-top-btn">
+            <div class="back-to-top" style="display: block;">
+                <a aria-hidden="true" class="fas fa-angle-up" href="#"></a>
+            </div>
+        </div>
+        <!-- To Top Button End -->
+    </div>
+    <!-- Main Class End -->
+    <!-- Start Search Modal -->
+    <div class="zoom-anim-dialog mfp-hide modal-searchPanel search-form" id="search-popup">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="search-panel">
+                    <form class="search-group">
+                        <div class="input-group">
+                            <input class="form-control" name="s" placeholder="Search" type="search" value=""> <button id='sbutton' class="input-group-btn search-button"><i class="fas fa-search"></i></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Search Modal -->
+    <!-- Start Filter Sidebar -->
+    <div class="filter-sidebar" id="f-Sidebar">
+        <a class="closebtn" href="javascript:void(0)" onclick="closeNav()"><i class="fas fa-times"></i></a>
+        <div class="filter-accordion" id="accordion">
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h2 class="mb-0"><button aria-controls="type" aria-expanded="false" class="d-flex align-items-center justify-content-between btn btn-link collapsed" data-target="#type" data-toggle="collapse">Display Type <span class="icofont-circled-down"></span></button></h2>
+                </div>
+                <!-- Card Header End -->
+                <div aria-labelledby="headingOne" class="collapse" data-parent="#accordion" id="type">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-6 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#">All</a>
+                            </div>
+                            <!-- Col End -->
+                            <div class="col-6 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#">Drama</a>
+                            </div>
+                            <!-- Col End -->
+                        </div>
+                        <!-- Row End -->
+                        <div class="row">
+                            <div class="col-6 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#">Action</a>
+                            </div>
+                            <!-- Col End -->
+                            <div class="col-6 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#">Romantic</a>
+                            </div>
+                            <!-- Col End -->
+                        </div>
+                        <!-- Row End -->
+                        <div class="row">
+                            <div class="col-6 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#">Crime</a>
+                            </div>
+                            <!-- Col End -->
+                            <div class="col-6 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#">Excitement</a>
+                            </div>
+                            <!-- Col End -->
+                        </div>
+                        <!-- Row End -->
+                        <div class="row">
+                            <div class="col-6 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#">Comedy</a>
+                            </div>
+                            <!-- Col End -->
+                            <div class="col-6 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#">Ambiguity</a>
+                            </div>
+                            <!-- Col End -->
+                        </div>
+                        <!-- Row End -->
+                        <div class="row">
+                            <div class="col-6 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#">Adventures</a>
+                            </div>
+                            <!-- Col End -->
+                            <div class="col-6 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#">Fantasia</a>
+                            </div>
+                            <!-- Col End -->
+                        </div>
+                        <!-- Row End -->
+                        <div class="row">
+                            <div class="col-6 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#">Horror</a>
+                            </div>
+                            <!-- Col End -->
+                            <div class="col-6 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#">Fiction</a>
+                            </div>
+                            <!-- Col End -->
+                        </div>
+                        <!-- Row End -->
+                    </div>
+                    <!-- Card Body End -->
+                </div>
+                <!-- Type Collapse End -->
+            </div>
+            <!-- Card End -->
+            <div class="card">
+                <div class="card-header" id="headingTwo">
+                    <h2 class="mb-0"><button aria-controls="production" aria-expanded="false" class="d-flex align-items-center justify-content-between btn btn-link collapsed" data-target="#production" data-toggle="collapse">Year of Production <span class="icofont-circled-down"></span></button></h2>
+                </div>
+                <!-- Card Header End -->
+                <div aria-labelledby="headingTwo" class="collapse" data-parent="#accordion" id="production">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-4 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#">All</a>
+                            </div>
+                            <!-- Col End -->
+                            <div class="col-4 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#">2000</a>
+                            </div>
+                            <!-- Col End -->
+                            <div class="col-4 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#">2001</a>
+                            </div>
+                            <!-- Col End -->
+                        </div>
+                        <!-- Row End -->
+                        <div class="row">
+                            <div class="col-4 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#">2002</a>
+                            </div>
+                            <!-- Col End -->
+                            <div class="col-4 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#">2003</a>
+                            </div>
+                            <!-- Col End -->
+                            <div class="col-4 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#">2004</a>
+                            </div>
+                            <!-- Col End -->
+                        </div>
+                        <!-- Row End -->
+                        <div class="row">
+                            <div class="col-4 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#">2005</a>
+                            </div>
+                            <!-- Col End -->
+                            <div class="col-4 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#">2006</a>
+                            </div>
+                            <!-- Col End -->
+                            <div class="col-4 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#">2007</a>
+                            </div>
+                            <!-- Col End -->
+                        </div>
+                        <!-- Row End -->
+                        <div class="row">
+                            <div class="col-4 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#">2008</a>
+                            </div>
+                            <!-- Col End -->
+                            <div class="col-4 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#">2009</a>
+                            </div>
+                            <!-- Col End -->
+                            <div class="col-4 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#">2010</a>
+                            </div>
+                            <!-- Col End -->
+                        </div>
+                        <!-- Row End -->
+                        <div class="row">
+                            <div class="col-4 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#">2011</a>
+                            </div>
+                            <!-- Col End -->
+                            <div class="col-4 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#">2012</a>
+                            </div>
+                            <!-- Col End -->
+                            <div class="col-4 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#">2013</a>
+                            </div>
+                            <!-- Col End -->
+                        </div>
+                        <!-- Row End -->
+                        <div class="row">
+                            <div class="col-4 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#">2014</a>
+                            </div>
+                            <!-- Col End -->
+                            <div class="col-4 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#">2015</a>
+                            </div>
+                            <!-- Col End -->
+                            <div class="col-4 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#">2016</a>
+                            </div>
+                            <!-- Col End -->
+                        </div>
+                        <!-- Row End -->
+                        <div class="row">
+                            <div class="col-4 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#">2017</a>
+                            </div>
+                            <!-- Col End -->
+                            <div class="col-4 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#">2018</a>
+                            </div>
+                            <!-- Col End -->
+                            <div class="col-4 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#">2019</a>
+                            </div>
+                            <!-- Col End -->
+                        </div>
+                        <!-- Row End -->
+                        <div class="row">
+                            <div class="col-4 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#">2020</a>
+                            </div>
+                            <!-- Col End -->
+                            <div class="col-4 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#">2021</a>
+                            </div>
+                            <!-- Col End -->
+                            <div class="col-4 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#">2022</a>
+                            </div>
+                            <!-- Col End -->
+                        </div>
+                        <!-- Row End -->
+                    </div>
+                    <!-- Card Body End -->
+                </div>
+                <!-- Production Collapse End -->
+            </div>
+            <!-- Card End -->
+            <div class="card">
+                <div class="card-header" id="headingThree">
+                    <h2 class="mb-0"><button aria-controls="quality" aria-expanded="false" class="d-flex align-items-center justify-content-between btn btn-link collapsed" data-target="#quality" data-toggle="collapse">Display Quality <span class="icofont-circled-down"></span></button></h2>
+                </div>
+                <!-- Card Header End -->
+                <div aria-labelledby="headingThree" class="collapse" data-parent="#accordion" id="quality">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-6 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#">All</a>
+                            </div>
+                            <!-- Col End -->
+                            <div class="col-6 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#">720p HDTV</a>
+                            </div>
+                            <!-- Col End -->
+                        </div>
+                        <!-- Row End -->
+                        <div class="row">
+                            <div class="col-6 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#">1080p BluRay</a>
+                            </div>
+                            <!-- Col End -->
+                            <div class="col-6 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#">720p BluRay</a>
+                            </div>
+                            <!-- Col End -->
+                        </div>
+                        <!-- Row End -->
+                        <div class="row">
+                            <div class="col-6 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#">1080p WEB-DL</a>
+                            </div>
+                            <!-- Col End -->
+                            <div class="col-6 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#">720p WEBRip</a>
+                            </div>
+                            <!-- Col End -->
+                        </div>
+                        <!-- Row End -->
+                        <div class="row">
+                            <div class="col-6 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#">720p HD</a>
+                            </div>
+                            <!-- Col End -->
+                            <div class="col-6 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#">1080p HD</a>
+                            </div>
+                            <!-- Col End -->
+                        </div>
+                        <!-- Row End -->
+                        <div class="row">
+                            <div class="col-6 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#">HDTV</a>
+                            </div>
+                            <!-- Col End -->
+                            <div class="col-6 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#">720p WEB-Dl</a>
+                            </div>
+                            <!-- Col End -->
+                        </div>
+                        <!-- Row End -->
+                    </div>
+                    <!-- Card Body End -->
+                </div>
+                <!-- Quality Collapse End -->
+            </div>
+            <!-- Card End -->
+            <div class="card">
+                <div class="card-header" id="headingFour">
+                    <h2 class="mb-0"><button aria-controls="country" aria-expanded="false" class="d-flex align-items-center justify-content-between btn btn-link collapsed" data-target="#country" data-toggle="collapse">Country of Production <span class="icofont-circled-down"></span></button></h2>
+                </div>
+                <!-- Card Header End -->
+                <div aria-labelledby="headingThree" class="collapse" data-parent="#accordion" id="country">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-6 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#">All</a>
+                            </div>
+                            <!-- Col End -->
+                            <div class="col-6 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#">France</a>
+                            </div>
+                            <!-- Col End -->
+                        </div>
+                        <!-- Row End -->
+                        <div class="row">
+                            <div class="col-6 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#">Canada</a>
+                            </div>
+                            <!-- Col End -->
+                            <div class="col-6 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#">China</a>
+                            </div>
+                            <!-- Col End -->
+                        </div>
+                        <!-- Row End -->
+                        <div class="row">
+                            <div class="col-6 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#">Argentina</a>
+                            </div>
+                            <!-- Col End -->
+                            <div class="col-6 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#">Australia</a>
+                            </div>
+                            <!-- Col End -->
+                        </div>
+                        <!-- Row End -->
+                        <div class="row">
+                            <div class="col-6 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#">United States</a>
+                            </div>
+                            <!-- Col End -->
+                            <div class="col-6 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#">Germany</a>
+                            </div>
+                            <!-- Col End -->
+                        </div>
+                        <!-- Row End -->
+                        <div class="row">
+                            <div class="col-6 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#">Japan</a>
+                            </div>
+                            <!-- Col End -->
+                            <div class="col-6 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#">Italy</a>
+                            </div>
+                            <!-- Col End -->
+                        </div>
+                        <!-- Row End -->
+                    </div>
+                    <!-- Card Body End -->
+                </div>
+                <!-- Country Collapse End -->
+            </div>
+            <!-- Card End -->
+            <div class="card">
+                <div class="card-header" id="headingFive">
+                    <h2 class="mb-0"><button aria-controls="language" aria-expanded="false" class="d-flex align-items-center justify-content-between btn btn-link collapsed" data-target="#language" data-toggle="collapse">The Language <span class="icofont-circled-down"></span></button></h2>
+                </div>
+                <!-- Card Header End -->
+                <div aria-labelledby="headingThree" class="collapse" data-parent="#accordion" id="language">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-6 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#">All</a>
+                            </div>
+                            <!-- Col End -->
+                            <div class="col-6 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#">Arabic</a>
+                            </div>
+                            <!-- Col End -->
+                        </div>
+                        <!-- Row End -->
+                        <div class="row">
+                            <div class="col-6 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#">English</a>
+                            </div>
+                            <!-- Col End -->
+                            <div class="col-6 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#">German</a>
+                            </div>
+                            <!-- Col End -->
+                        </div>
+                        <!-- Row End -->
+                        <div class="row">
+                            <div class="col-6 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#">Spanish</a>
+                            </div>
+                            <!-- Col End -->
+                            <div class="col-6 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#">French</a>
+                            </div>
+                            <!-- Col End -->
+                        </div>
+                        <!-- Row End -->
+                        <div class="row">
+                            <div class="col-6 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#">Italian</a>
+                            </div>
+                            <!-- Col End -->
+                            <div class="col-6 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#">Russian</a>
+                            </div>
+                            <!-- Col End -->
+                        </div>
+                        <!-- Row End -->
+                        <div class="row">
+                            <div class="col-6 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#">Japanese</a>
+                            </div>
+                            <!-- Col End -->
+                            <div class="col-6 col-xl mb-xl-0">
+                                <a class="btn d-block" href="#">Chinese</a>
+                            </div>
+                            <!-- Col End -->
+                        </div>
+                        <!-- Row End -->
+                    </div>
+                    <!-- Card Body End -->
+                </div>
+                <!-- Language Collapse End -->
+            </div>
+            <!-- Card End -->
+        </div>
+        <!-- Filter Accordion End -->
+    </div>
+    <!-- Filter Sidebar End -->
+
+    <!-- Javascript Files
+    ================================================== -->
+    <!-- Initialize jQuery Library -->
+    <script src="static/js/jquery.js"></script>
+    <!-- Popper jQuery -->
+    <script src="static/js/popper.min.js"></script>
+    <!-- Bootstrap jQuery -->
+    <script src="static/js/bootstrap.min.js"></script>
+    <!-- jQuery Owl Carousel -->
+    <script src="static/js/owl.carousel.min.js"></script>
+    <!-- jQuery Slick Slider -->
+    <script src="static/js/slick.min.js"></script>
+    <!-- jQuery Slick Animation -->
+    <script src="static/js/slick-animation.min.js"></script>
+    <!-- jQuery Pop-up Search -->
+    <script src="static/js/jquery.magnific-popup.min.js"></script>
+    <!-- jQuery Swiper Slider -->
+    <script src="static/js/swiper.min.js"></script>
+    <script src="static/js/swiper-custom.js"></script>
+    <!-- jQuery Datepicker -->
+    <script src="static/js/bootstrap-datepicker.min.js"></script>
+    <!-- JQuery Sidebar -->
+    <script src="static/js/sidebar.js"></script>
+    <!-- Template Custom -->
+    <script src="static/js/main.js"></script>
+<style>
+span.msg,
+span.choose {
+  color: #555;
+  padding: 5px 0 10px;
+  display: inherit
+}
+.container2 {
+  width: 500px;
+  margin: 50px auto 0;
+  text-align: center
+}
+
+/*Styling Selectbox*/
+.dropdown2 {
+  width: 110px;
+  bottom:16px;
+  display: inline-block;
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: 0 0 2px rgb(204, 204, 204);
+  transition: all .5s ease;
+  position: relative;
+  font-size: 14px;
+  color: #474747;
+  height: 100%;
+  text-align: center;
+  border-radius: 5px;
+
+}
+.dropdown2 .select {
+    cursor: pointer;
+    display: block;
+    padding: 10px
+}
+.dropdown2 .select > i {
+    font-size: 13px;
+    color: #888;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    float: right;
+    line-height: 20px
+}
+.dropdown2:hover {
+    box-shadow: 0 0 4px rgb(204, 204, 204)
+}
+.dropdown2:active {
+    background-color: #f8f8f8
+}
+.dropdown2.active:hover,
+.dropdown2.active {
+    box-shadow: 0 0 4px rgb(204, 204, 204);
+    border-radius: 2px 2px 0 0;
+    background-color: #f8f8f8
+}
+.dropdown2.active .select > i {
+    transform: rotate(-90deg)
+}
+.dropdown2 .dropdown-menu2 {
+    position: absolute;
+    background-color: #fff;
+    width: 100%;
+    left: 0;
+    margin-top: 1px;
+    box-shadow: 0 1px 2px rgb(204, 204, 204);
+    border-radius: 0 1px 2px 2px;
+    overflow: hidden;
+    display: none;
+    max-height: 144px;
+    overflow-y: auto;
+    z-index: 9
+}
+.dropdown2 .dropdown-menu2 li {
+    padding: 10px;
+    transition: all .2s ease-in-out;
+    cursor: pointer
+}
+.dropdown2 .dropdown-menu2 {
+    padding: 0;
+    list-style: none
+}
+.dropdown2 .dropdown-menu2 li:hover {
+    background-color: #f2f2f2
+}
+.dropdown2 .dropdown-menu2 li:active {
+    background-color: #e2e2e2
+}
+
+</style>
+
+    <style>
+
+fieldset {
+  position: relative;
+  display: inline-block;
+  padding: 0 0 0 40px;
+  background: #fff;
+  border: none;
+  border-radius: 5px;
+}
+
+input,
+button {
+  position: relative;
+  width: 200px;
+  height: 41px;
+  padding: 0;
+  display: inline-block;
+  float: left;
+}
+
+input {
+  color: #666;
+  z-index: 2;
+  border: 0 none;
+}
+input:focus {
+  outline: 0 none;
+}
+input:focus + button {
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0);
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+}
+input:focus + button .fa {
+  -webkit-transform: translate(0px, 0);
+      -ms-transform: translate(0px, 0);
+          transform: translate(0px, 0);
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  color: #fff;
+}
+
+button {
+  z-index: 1;
+  width: 50px;
+  border: 0 none;
+  background: #FF0B0B;
+  cursor: pointer;
+  border-radius: 0 5px 5px 0;
+  -webkit-transform: translate(-50px, 0);
+      -ms-transform: translate(-50px, 0);
+          transform: translate(-50px, 0);
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+}
+
+.fa-search {
+  font-size: 1.4rem;
+  color: #FF0B0B;
+  z-index: 3;
+  top: 25%;
+  -webkit-transform: translate(-190px, 0);
+      -ms-transform: translate(-190px, 0);
+          transform: translate(-190px, 0);
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  -webkit-transition: all 0.1s ease-in-out;
+          transition: all 0.1s ease-in-out;
+}
+</style>
+<script>
+   /*Dropdown Menu*/
+$('.dropdown2').click(function () {
+        $(this).attr('tabindex', 1).focus();
+        $(this).toggleClass('active');
+        $(this).find('.dropdown-menu2').slideToggle(300);
+    });
+    $('.dropdown2').focusout(function () {
+        $(this).removeClass('active');
+        $(this).find('.dropdown-menu2').slideUp(300);
+    });
+    $('.dropdown2 .dropdown-menu2 li').click(function () {
+        $(this).parents('.dropdown2').find('span').text($(this).text());
+        $(this).parents('.dropdown2').find('input').attr('value', $(this).attr('id'));
+    });
+/*End Dropdown Menu*/
+
+
+$('.dropdown-menu2 li').click(function () {
+  var input = '<strong>' + $(this).parents('.dropdown2').find('input').val() + '</strong>',
+      msg = '<span class="msg">Hidden input value: ';
+
+  $('.msg').html(msg + input + '</span>');
+});
+</script>
+    <script>
+
+    //---------------------------login(체크) get -------------------
+    //$( "#search_str" ).keydown(function() {
+    $(document).on('keyup', '#search_str', function() {
+        //비동기통신해라.....
+        $.ajax({  url: "/com_search_ajax" ,
+                  type : "post",
+                  data: {"search_str" : $("#search_str").val() } ,
+                  success: function(flask_return_str) {
+                        console.log(flask_return_str);
+                        //------------String -- 객체 로 변환 -------------
+                        flask_return_list  = JSON.parse(flask_return_str)  //jquery
+                        console.log(flask_return_list);
+
+                        html_str = "<table border=0  bordercolor=#EDEDED>"
+                        //-------------------------------------------------
+                        $.each(flask_return_list, function( i, v ) {
+                            //i 0   v ['smith', 1400]
+                            //i 1   v ['allen', 4000]
+                            console.log( v[0] , v[1]);
+                            html_str += "<tr><td><button style='position: relative;background-color: #EDEDED;width:100%;left:30%;height:100%;border:0; outline:0;' class='ajax_com_name_btn' value="+v[0]+" id="+i+"_name >"+v[1]+"</button></td></tr>"    //script
+                        });
+                        html_str += "</table>"
+                        $( "#resdiv" ).empty();
+                        $( "#resdiv" ).html(html_str);
+                   },
+                  error: function(res){  } ,
+                  crossDomain: true
+
+              });
+    });
+
+
+    $(document).on("click", "#jamybody", function(){
+        $( "#resdiv" ).empty();
+    });
+
+
+
+</script>
+
+</body>
+
+
+<!-- Mirrored from excellencetheme.com/templates/avastream/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 11 Mar 2022 09:26:16 GMT -->
+</html>
